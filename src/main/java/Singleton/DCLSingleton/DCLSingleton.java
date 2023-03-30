@@ -6,7 +6,7 @@ package Singleton.DCLSingleton;
  * @date: 2023年03月30日 17:32
  */
 public class DCLSingleton {
-    private static DCLSingleton dclSingleton;
+    private volatile static DCLSingleton dclSingleton;
     private DCLSingleton() {}
 
     public static DCLSingleton getInstance(){
