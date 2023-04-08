@@ -1,4 +1,4 @@
-package Singleton.DCLSingleton;
+package Singleton.LazySingleton.DCLSingleton;
 
 /**
  * @description: TODO
@@ -8,12 +8,15 @@ package Singleton.DCLSingleton;
 public class DCLSingleton {
     private volatile static DCLSingleton dclSingleton;
     private DCLSingleton() {}
-
+    private DCLSingleton(String param) {
+        System.out.println(param);
+    }
     public static DCLSingleton getInstance(){
         if (dclSingleton == null) {
             synchronized (DCLSingleton.class) {
                 if(dclSingleton == null) {
-                    dclSingleton = new DCLSingleton();
+                    String name = "param";
+                    dclSingleton = new DCLSingleton(name);
                 }
             }
         }

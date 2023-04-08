@@ -1,4 +1,4 @@
-package Singleton.DCLSingleton;
+package Singleton.LazySingleton.DCLSingleton;
 
 /**
  * @description: TODO
